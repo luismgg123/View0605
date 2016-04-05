@@ -3,7 +3,7 @@ import android.app.Activity;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-
+//adapatador
 public class Adapter extends PagerAdapter {
 
     private Activity activity;
