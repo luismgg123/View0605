@@ -1,11 +1,18 @@
 package inkadroid.com.viewpager;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -15,7 +22,7 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.squareup.picasso.Picasso;
 
-public class MainActivity extends Activity  {
+public class MainActivity extends Activity {
     private ViewPager guide_pager;
     private ImageView imageView;
     private ImageButton ir;
@@ -24,6 +31,8 @@ public class MainActivity extends Activity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         /////////////google analytic///////////////////////////////////////////////////
         Tracker t = ((inkadroid.com.viewpager.ViewPager) getApplication()).getTracker();
         t.setScreenName("Pagina - Principal");
@@ -74,7 +83,9 @@ public class MainActivity extends Activity  {
         ir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplication(),"EN CONSTRUCCION",Toast.LENGTH_LONG).show();
+
+                Intent downloadIntent = new Intent(MainActivity.this, Principal.class);
+                startActivity(downloadIntent);
             }
         });
 
@@ -124,4 +135,6 @@ public class MainActivity extends Activity  {
                 break;
         }
     }
+
+
 }
