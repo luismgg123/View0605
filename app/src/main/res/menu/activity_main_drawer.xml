@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_camera_alt_24dp"
+            android:title="Noticias"/>
+        <item
+            android:id="@+id/nav_exchange_rate"
+            android:icon="@drawable/ic_settings_24dp"
+            android:title="Tipo de Cambios"/>
+        <item
+            android:id="@+id/calculator"
+            android:icon="@drawable/ic_collections_24dp"
+            android:title="Calculadora"/>
+        <item
+            android:id="@+id/exchange"
+            android:icon="@drawable/ic_video_collection_24dp"
+            android:title="Mercados"/>
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_send_24dp"
+            android:title="Localizar"/>
+    </group>
+</menu>
